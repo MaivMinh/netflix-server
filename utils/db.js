@@ -24,10 +24,11 @@ const option = {
     // Consider using Node environment variables.
     user: 'minhfoolish',     
     password: '49@Da5J,[KsemDN',
-    database: 'netflix-database',
+    database: 'postgres',
     port: 5432,
     ssl: true
 };
+
 
 const db = new pg.Client(option);
 
