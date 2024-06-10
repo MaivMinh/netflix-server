@@ -68,5 +68,6 @@ jobs:
         with:
           app-name: 'netflix-server'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.azureWebAppPublishProfile }}
           package: .
           
