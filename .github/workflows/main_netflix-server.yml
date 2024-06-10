@@ -35,6 +35,11 @@ jobs:
         with:
           name: node-app
           path: release.zip
+      - name: Run custom script with Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - run: nodemon main.js
 
   deploy:
     runs-on: ubuntu-latest
