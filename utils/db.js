@@ -1,3 +1,5 @@
+
+/* SỬ DỤNG CHO LOCAL RDMS.
 const pgp = require("pg-promise")({
   capSQL: false,
 });
@@ -11,6 +13,23 @@ const option = {
 };
 
 const db = pgp(option);
+ */
+
+// SỬ DỤNG CHO KẾT NỐI VỚI AZURE.
+const pg = require('pg');
+
+const option = {
+    host: 'netflix-database.postgres.database.azure.com',
+    // Do not hard code your username and password.
+    // Consider using Node environment variables.
+    user: 'minhfoolish',     
+    password: '49@Da5J,[KsemDN',
+    database: 'netflix-database',
+    port: 5432,
+    ssl: true
+};
+
+const db = new pg.Client(option);
 
 module.exports = {
   addUser: async (user) => {
