@@ -24,6 +24,8 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
+          npm uninstall bcrypt
+          npm install bcrypt
           npm run build --if-present
 
       - name: Zip artifact for deployment
